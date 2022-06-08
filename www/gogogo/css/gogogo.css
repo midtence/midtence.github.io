@@ -1,0 +1,176 @@
+
+
+
+body{
+    margin: 0px;
+    background: #efefef;
+}
+
+
+
+/* --------------------------------------- 主内容区 --------------------------------------- */
+#mainframe{
+    --side-width: 72px;
+    --side-height: 72px;
+
+    display: grid;
+    grid-template-columns: calc(var(--side-width) * 3) auto calc(var(--side-width) * 3);
+    grid-template-areas: "leftbar go rightbar";
+    width: calc(var(--side-width) * 3 + var(--side-width) * 19 + var(--side-width) * 3);
+    
+    margin: auto;
+    margin-top: 5px;
+}
+
+
+
+/* ---------------------------- 信息区域 ---------------------------- */
+
+.bar{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-evenly; */
+
+    width: calc(var(--side-width) * 3);
+    font-size: 2em;
+    max-height: calc(var(--side-width) * 20);
+}
+
+#leftbar{
+    
+    text-align: left;
+    grid-area: leftbar;
+}
+#rightbar{
+    
+    text-align: right;
+    grid-area: rightbar;
+}
+/* #blackbar{
+    flex: 1;
+} */
+
+#reset, #forbidgo{
+    align-self: auto;
+    
+}
+
+#leftflag{
+    writing-mode: vertical-lr;
+}
+#rightflag{
+    writing-mode: vertical-rl;
+}
+.flag{
+
+    overflow: hidden;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    /* animation-name: expflag;
+    animation-duration: 2s;
+    animation-fill-mode: forwards; */
+}
+
+@keyframes expflag{
+    0%{
+        width: inherit;
+        height: 0px;
+    }
+    100%{
+        width: inherit;
+        height: 300px;
+        color: red;
+    }
+}
+
+
+
+/* --------------------------------------- 棋盘区域 --------------------------------------- */
+#container{
+    position: relative;
+    left: 0px;
+    top: 0px;
+
+    --cell-height: 72px;
+    --cell-width: var(--cell-height);
+    
+    width: calc(var(--cell-width) * 19);
+    height: calc(var(--cell-height) * 19);
+
+    grid-area: go;
+}
+
+/* ---------------------------- 棋格区 ---------------------------- */
+#go{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+
+    /* border: 1px solid red; */
+
+    display: grid;
+    grid-template: repeat(19, var(--cell-width)) / repeat(19, var(--cell-height));
+
+    width: fit-content;
+    justify-content: center;
+    align-content: center;
+
+    background: transparent;
+}
+#go:hover{
+    cursor: url("../image/cursor.ico"),crosshair;
+}
+
+.cell{
+    /* border: 1px solid; */
+
+    font-size: 1.5em;
+    text-align: center;
+    line-height: var(--cell-height);
+}
+
+/* ---------------------------- 栅格区 ---------------------------- */
+#svggrid{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+
+    width: calc(var(--cell-width) * 19);
+    height: calc(var(--cell-height) * 19);
+
+    /* background: rgba(255,255,255,0.7); */
+    background: burlywood;
+    /* border: 1px solid red; */
+}
+.goline{
+    stroke:black;
+    stroke-width:1px;
+}
+.boldgoline{
+    stroke:red;
+    stroke-width:2px;
+}
+.svgcircle{
+    stroke: black;
+    stroke-width: 1px;
+    fill: black;
+}
+
+.goyang{
+    stroke: transparent;
+    stroke-width: 1px;
+    fill: url(#black);
+}
+.goyin{
+    stroke: transparent;
+    stroke-width: 1px;
+    fill: url(#white);
+}
+
+line[axis="a"], line[axis="1"], line[axis="s"], line[axis="19"], line[axis="10"], line[axis="j"]{
+    stroke: black;
+    stroke-width:2px;
+}

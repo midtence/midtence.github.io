@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="Author" content="Linden">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta charset="UTF-8">
+    <title> GoGoGo </title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="image/favicon.ico" />
+    <link rel="stylesheet" href="css/gogogo.css">
+
+    <script type="text/javascript" src="js/gogogo.js" defer> </script>
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+
+    <div id="mainframe">
+
+        <div id="leftbar" class="bar">
+            <div id="blackbar">黑</div>
+            <button type="button" id="blackfirst" style="font-size: 1em;">黑先手</button>
+            <button type="button" id="reset" style="font-size: 1em;">重置</button>
+            <button type="button" id="forbidgo" style="font-size: 1em;">暂停</button>
+
+            <div id="leftflag" class="flag" > </div>
+        </div>
+        <div id="rightbar" class="bar">
+            <div id="whitebar">白</div>
+            <button type="button" id="whitefirst" style="font-size: 1em;">白先手</button>
+
+            <div id="rightflag" class="flag" >  </div>
+        </div>
+
+        <div id="container">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="svggrid"> 
+                <defs>
+                    <radialGradient id="black" cx=".3" cy=".3" r="60%">
+                    <stop offset="0%" stop-color="#bbb"></stop>
+                    <stop offset="100%" stop-color="#000"></stop>
+                    </radialGradient>
+
+                    <radialGradient id="white" cx=".3" cy=".3" r="0.9">
+                        <stop offset="0%" stop-color="#fff"></stop>
+                        <stop offset="100%" stop-color="#777"></stop>
+                    </radialGradient>
+                </defs>
+            </svg>
+
+            <div id="go" >  </div>
+        </div>
+    </div>
+</body>
+
+</html>
