@@ -1,0 +1,24 @@
+.pieces {
+    width: 84px;
+    height: 84px;
+    border-radius: 50px;
+    border: rgb(78, 56, 23) double 8px;
+    background-color: rgb(192, 149, 106);
+    margin: auto;
+    text-align: center;
+    font: 60px "楷體";
+    line-height: 84px;
+    text-shadow: 0px 0px 2px white;
+    box-shadow: 3px 3px 2px black;
+    float: left;
+    margin: 10px;
+}
+
+.red {
+    color: rgb(144, 11, 11);
+    border-color: rgb(144, 11, 11)
+}
+
+.black {
+    color: rgb(78, 56, 23)
+}
