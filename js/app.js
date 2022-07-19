@@ -58,9 +58,14 @@ const EventHandling = {
     data() {
       return {
         todos: [
-          { text: 'Learn JavaScript' },
-          { text: 'Learn Vue' },
-          { text: 'Build something awesome' }
+          { text: '海面' },
+          { text: '宽阔的水面' },
+          { text: '沙漠' },
+          { text: '森林' },
+          { text: '草原' },
+          { text: '冰原' },
+          { text: '雪山' },
+          { text: '星空' }
         ]
       }
     }
