@@ -1,2 +1,2 @@
 # mitence.github.io
-My Github Web Page 😊
+Mitence's Github Web Page
